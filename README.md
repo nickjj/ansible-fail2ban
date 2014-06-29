@@ -86,7 +86,7 @@ fail2ban_services:
     logpath: /var/log/auth.log
 
     # How many times can they try before getting banned?
-    # OPTIONAL: Defaults to 6.
+    # OPTIONAL: Defaults to the default maxretry listed above.
     maxretry: 6
 
     # What should the default ban action be?
