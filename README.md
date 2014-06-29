@@ -74,7 +74,7 @@ fail2ban_services:
     port: ssh
 
     # What protocol does the service use?
-    # OPTIONAL: Defaults to the default tcp listed above.
+    # OPTIONAL: Defaults to the protocol listed above.
     protocol: tcp
 
     # What filter should it use?
@@ -86,15 +86,15 @@ fail2ban_services:
     logpath: /var/log/auth.log
 
     # How many times can they try before getting banned?
-    # OPTIONAL: Defaults to the default maxretry listed above.
+    # OPTIONAL: Defaults to the maxretry listed above.
     maxretry: 6
 
     # What should the default ban action be?
-    # OPTIONAL: Defaults to the default action listed above.
+    # OPTIONAL: Defaults to the action listed above.
     action: action_
 
     # How should the ban be applied?
-    # OPTIONAL: Defaults to the default banaction listed above.
+    # OPTIONAL: Defaults to the banaction listed above.
     banaction: iptables-multiport
 
 # The amount in seconds to cache apt-update.
