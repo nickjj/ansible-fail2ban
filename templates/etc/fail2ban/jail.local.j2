@@ -30,7 +30,7 @@ enabled = {{ service.enabled|default("true") }}
 port = {{ service.port }}
 filter = {{ service.filter }}
 logpath = {{ service.logpath }}
-maxretry = {{ service.maxretry|default("6") }}
+maxretry = {{ service.maxretry|default(fail2ban_maxretry) }}
 {% if service.protocol is defined %}
 protocol = {{ service.protocol }}
 {% endif %}
