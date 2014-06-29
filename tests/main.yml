@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  remote_user: travis
+  sudo: true
+
+  vars:
+    fail2ban_services:
+    - name: ssh
+      port: ssh
+      filter: sshd
+      logpath: /var/log/auth.log
+    - name: postfix
+      port: smtp,ssmtp
+      filter: postfix
+      logpath: /var/log/mail.log
+
+  roles:
+    - ansible-fail2ban
