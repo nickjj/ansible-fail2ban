@@ -5,7 +5,7 @@ fail2ban_socket: /var/run/fail2ban/fail2ban.sock
 
 fail2ban_ignoreip: 127.0.0.1/8
 fail2ban_bantime: 600
-fail2ban_maxretry: 3
+fail2ban_maxretry: 6
 
 fail2ban_backend: polling
 

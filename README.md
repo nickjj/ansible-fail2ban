@@ -29,7 +29,7 @@ fail2ban_ignoreip: 127.0.0.1/8
 fail2ban_bantime: 600
 
 # How many times can they try before getting banned?
-fail2ban_maxretry: 3
+fail2ban_maxretry: 6
 
 # How should the file changes be detected?
 # gamin, polling, auto
@@ -74,7 +74,7 @@ fail2ban_services:
     port: ssh
 
     # What protocol does the service use?
-    # OPTIONAL: Defaults to tcp.
+    # OPTIONAL: Defaults to the default tcp listed above.
     protocol: tcp
 
     # What filter should it use?
@@ -89,12 +89,12 @@ fail2ban_services:
     # OPTIONAL: Defaults to 6.
     maxretry: 6
 
-    # How many times can they try before getting banned?
-    # OPTIONAL: Defaults to the default setting listed above.
+    # What should the default ban action be?
+    # OPTIONAL: Defaults to the default action listed above.
     action: action_
 
-    # How many times can they try before getting banned?
-    # OPTIONAL: Defaults to the default setting listed above.
+    # How should the ban be applied?
+    # OPTIONAL: Defaults to the default banaction listed above.
     banaction: iptables-multiport
 
 # The amount in seconds to cache apt-update.
