@@ -13,6 +13,7 @@
       port: smtp,ssmtp
       filter: postfix
       logpath: /var/log/mail.log
+      maxretry: 3
 
   roles:
     - ansible-fail2ban

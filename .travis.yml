@@ -19,6 +19,6 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   - >
     sudo cat /etc/fail2ban/jail.local
-    | grep -q '\[ssh\]\|\[postfix\]\|enabled = true\|maxretry = 6'
+    | grep -q '\[ssh\]\|\[postfix\]\|enabled = true\|maxretry = 3'
     && (echo 'Services added test: pass' && exit 0)
     || (echo 'Services added test: fail' && exit 1)
