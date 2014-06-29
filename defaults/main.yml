@@ -22,3 +22,5 @@ fail2ban_services:
     port: ssh
     filter: sshd
     logpath: /var/log/auth.log
+
+apt_cache_valid_time: 86400
