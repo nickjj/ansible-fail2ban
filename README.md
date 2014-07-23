@@ -113,7 +113,7 @@ To use this role edit your `site.yml` file to look something like this:
 - hosts: app
 
   roles:
-    - { role: nickjj.fail2ban, tags: fail2ban }
+    - { role: nickjj.fail2ban, sudo: true, tags: fail2ban }
 ```
 
 Let's say you want to edit a few values, you can do this by opening or creating `group_vars/app.yml` which is located relative to your `inventory` directory and then making it look something like this:
